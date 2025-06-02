@@ -1,5 +1,3 @@
 [submodule "docs/styles/documentation-styles"]
 	path = docs/styles/documentation-styles
 	url = git@github.com:Dyalog/documentation-styles.git
-[submodule "documentation-styles"]
-	main = main
