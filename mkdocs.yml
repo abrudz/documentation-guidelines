@@ -30,6 +30,7 @@ markdown_extensions:
       title: On this page
 extra_css:
   - styles/documentation-styles/css/main.css
+  - styles/documentation-styles/css/extra.css
   - styles/style-guide.css
 nav:
   - Home: index.md
