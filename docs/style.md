@@ -85,17 +85,34 @@ Used to create links to other parts of the same document, [other documents](#ref
 
 Link text is surrounded by square brackets and the link URL is in round parentheses.
 
-- <span class="example">Example: link text is URL</span>
-    ```
-    Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/Dyalog/link)
-    ```
-    Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/Dyalog/link)
+### Internal links
+Links can use text other than the URL when linking to:
 
-- <span class="example">Example: alternative link text</span>
-    ```
-    Download [Link](https://github.com/Dyalog/link) and...
-    ```
-    Download [Link](https://github.com/Dyalog/link) and...
+- a place within the same page
+- a page within the same document
+- a page or document within the same project
+- another document in a different Dyalog project
+
+<h4 class="example">Example</h4>
+
+```
+See the [Link User Guide](https://dyalog.github.io/link) and...
+```
+
+<div class="example-output" markdown="1">
+See the [Link User Guide](https://dyalog.github.io/link) and...
+</div>
+
+### Other links
+Other links should be phrased so that the link is the URL for clarity.
+
+```
+Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/Dyalog/link)
+```
+
+<div class="example-output" markdown="1">
+Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/Dyalog/link)
+</div>
 
 ## Mixing HTML and Markdown
 
