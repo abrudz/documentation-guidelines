@@ -6,7 +6,7 @@ theme:
   name: material
   favicon: documentation-assets/images/favicon-32.png
   language: en
-  logo: documentation-assets/images/dyalog-white.svg
+  logo: documentation-assets/images/dyalog-logo_white.svg
 plugins:
   - caption:
       table:
