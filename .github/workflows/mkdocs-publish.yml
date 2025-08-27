@@ -27,10 +27,8 @@ jobs:
       with:
         submodules: recursive
         fetch-depth: 0  # Required for mike to work properly
-
-    - name: Update Styles
-      run: git submodule update --remote --recursive docs/styles/documentation-styles
-    
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -76,9 +74,14 @@ jobs:
         echo "--- Checking substituted content ---"
         cat mkdocs.yml | grep -A5 copyright
 
+    - name: Move Assets into docs
+      run: |
+        mv documentation-assets docs
+
     - name: Deploy documentation
       run: |
-        mike deploy --push ${{ inputs.version }}
         if [ "${{ inputs.update_latest }}" = "true" ]; then
-          mike deploy --push --update-aliases ${{ inputs.version }} latest
+          mike deploy --push ${{ inputs.version }} latest
+        else
+          mike deploy --push ${{ inputs.version }}
         fi
