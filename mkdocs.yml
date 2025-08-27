@@ -4,9 +4,9 @@ repo_url: https://github.com/Dyalog/documentation-guidelines
 copyright: Copyright &copy; 2015-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong>
 theme:
   name: material
-  favicon: 'img/favicon-32.png'
+  favicon: documentation-assets/images/favicon-32.png
   language: en
-  logo: 'img/dyalog-white.svg'
+  logo: documentation-assets/images/dyalog-white.svg
 plugins:
   - caption:
       table:
@@ -29,8 +29,8 @@ markdown_extensions:
   - toc:
       title: On this page
 extra_css:
-  - styles/documentation-styles/css/main.css
-  - styles/documentation-styles/css/extra.css
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
   - styles/style-guide.css
 nav:
   - Home: index.md
