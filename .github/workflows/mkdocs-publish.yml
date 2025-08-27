@@ -80,7 +80,8 @@ jobs:
 
     - name: Deploy documentation
       run: |
-        mike deploy --push ${{ inputs.version }}
         if [ "${{ inputs.update_latest }}" = "true" ]; then
-          mike deploy --push --update-aliases ${{ inputs.version }} latest
+          mike deploy --push ${{ inputs.version }} latest
+        else
+          mike deploy --push ${{ inputs.version }}
         fi
