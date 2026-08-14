@@ -6,13 +6,21 @@ The documentation uses U.K. English for spellings and grammar.
 
 Abbreviations should not be used (for example, shouldn't, can't, won't) and neither should emoticons.
 
-Although the documents are not currently translated, they should be written as if they could be. That means consideration of the language used...can it be understood and translated unambiguously? For example, "configure" should be used rather than "set up" as "set up" can be misunderstood. This might sound silly, but translation is not always done in context, and people can put single words into Google Translate (for example) and get random results! Idioms, colloquialisms, and foreign expressions (including Latin) should also be avoided.
+Although the documents are not currently translated, they should be written as if they could be. That means consideration of the language used...can it be understood and translated unambiguously? For example, "configure" should be used rather than "set up" as "set up" can be misunderstood. This might sound silly, but translation is not always done in context, and people can put single words into Google Translate (for example) and get random results! Idioms, colloquialisms, and foreign expressions (including Latin) should also be avoided; for example, use "exactly" or "precisely" rather than the Latin "verbatim".
 
 Language style will vary between documents. For example, the Language Reference Guide needs to be very precise and official whereas a User Guide can include less formal statements such as "You might notice that...".
 
 Do **not** use an apostrophe when pluralising an acronym ("CPU's today are..." = WRONG)
 
 Try to make documents future-proof (especially with respect to dates/version numbers, "coming soon", and so on). Variables can help with this!
+
+Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect".
+
+Gloss a short code or abbreviation the first time it is shown, for example, "if `Format` is `'D'` (which stands for *Data*)".
+
+Use the Oxford (serial) comma before the final item in a list of three or more items, for example, "the major release, minor release, and build number".
+
+Keep the phrasing of parallel items consistent: entries in a list, rows in a table, or the descriptions of two related things should share the same structure and wording so the reader can compare them easily.
 
 ## Terminology
 
@@ -29,14 +37,16 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |PDF|pdf|
 |.NET|.Net, .net, any other variation|
 |dfn (Dfn when starting a sentence)|d-fn, D-fn, Dfn (unless starting a sentence), etc.|
-|Trace Window|Tracer, Debugger|
-|Edit Window|Editor|
+|Edit window (a window); the Editor (the tool)|Edit Window|
+|Trace window (a window); the Debugger (the tool, docked in Standard mode)|Trace Window, Tracer|
 |for example|eg, e.g., eg.|
 |that is|ie, i.e., ie.|
 |note|NB, N.B.|
 |Boolean|boolean|
 |UNIX|Unix, unix|
 |configuration parameter|environment variable|
+
+"Editor" and "Debugger" name the tools; "Edit window" and "Trace window" name individual windows. When introducing a configuration parameter, use the full term "configuration parameter", not just "parameter".
 
   
 Best practice:
@@ -98,15 +108,41 @@ Use full stops for your list items if they complete a sentence (in this situatio
 
 Legally, the owner of the product ought to be included the first time that a product is mentioned - this applies to every paragraph. For example, when writing about something that's on the Windows system, "Microsoft Windows" must be used the first time in the paragraph and just "Windows" can be used after that. However, if Windows is referred to in the subsequent paragraph, it needs to be "Microsoft Windows" again.
 
+## Describing Parameters and Values
+
+State a parameter's default value inline, in parentheses, for example, "(the default)".
+
+Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, the default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
+
+## Deprecations
+
+Describe a deprecated feature consistently:
+
+- state that it has been deprecated and is scheduled for removal in a future release;
+- name the replacement (or the configuration parameter that reinstates the previous behaviour) and link to it;
+- link to the relevant _Release Notes_ for guidance on identifying the deprecated usage in existing code.
+
+For example: "`739⌶` has been deprecated and is scheduled for removal in a future release. Its functionality is now provided by [`⎕SYSTEM.Directories.Temp`](#)."
+
 ## Notes
 
 Various icons are used in the documentation to emphasise specific material. Notes are also used to differentiate between operating-system-specific behaviour in cross-platform documents. See [Notes](./style.md#notes).
+
+Do not overuse notes. Only use an admonition when the content is a genuine aside (a hint, a warning, a piece of information set apart from the main flow). Content that belongs in the main narrative should be written as an ordinary paragraph, not wrapped in an admonition.
 
 ## Miscellaneous
 
 Full stops should be followed by a single space, not a double space.
 
-When using a dash in a sentence, use an en-dash not a hyphen.
+When using a dash in a sentence, use an en-dash not a hyphen. Write a numeric range with a spaced en-dash, for example, "1 – 2147483647".
+
+Separate paragraphs with a single blank line. Do not leave two or more consecutive blank lines, as they render as unwanted vertical gaps.
+
+Number footnotes in the order in which they are first referenced on the page.
+
+Refer to files supplied under the installation directory using the `[DYALOG]` placeholder, for example, **[DYALOG]/ws/dfns.dws**.
+
+Make sure visible (rendered) parentheses are balanced.
 
 ## Libraries: Operating System Differences
 

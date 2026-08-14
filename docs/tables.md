@@ -40,9 +40,13 @@ You can also create row-, and col-spans with easily accessible syntax. See the [
 !!! note "Tables are for data, not layout"
     Tables should be used for data, not document structure or layout. Unless you have a good reason not to, do name your columns. Complex tables are hard to read on a screen. If you find yourself reaching for more complex table layouts, consider if there are better ways to present the information.
 
+When there is no other natural order, list the rows of a reference table in alphabetical order. Every row must earn its place, and every column must carry meaningful content for that row; do not list an item (for example, a deprecated facility) with no useful entry in a column. Use `&nbsp;` for a cell that is intentionally empty. Keep the wording of related rows parallel, for example, matching "enabled" and "disabled" descriptions.
+
+Introduce a table with a sentence that says what it summarises. Where fuller detail follows the table, say so, for example, "each option is described in more detail below the table".
+
 ## Captions and References
 
-To caption a table, add a line beginning with "Table: " just before the table, and assign an id using an attribute list:
+To caption a table, add a line beginning with "Table&#58; " just before the table (separated from the table by a blank line), and assign an id using an attribute list. Write the caption in sentence case, capitalising only the first word and any proper nouns, for example, "Time numbers" or "Built-in languages":
 
 <pre>
 Table&#58; Cells with content { #MyTable }

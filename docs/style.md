@@ -27,6 +27,16 @@ In a MkDocs site, the left panel is defined by the organisation of the documenta
 
 Aim for a flatish structure, grouping logically related aspects into single Markdown documents.
 
+Give a document a file name that matches its page title (the H1), and update any table-of-contents entry to match.
+
+Where an overview introduces items that are then described in their own sub-sections, link the introductory bullets to those sub-sections, and keep the order of parallel constructs (an introductory list, any following list, and the sub-sections that expand them) identical throughout the page.
+
+Do not repeat content that already appears in another section; move it to the section where it belongs. Merge a stranded one-line paragraph into the adjacent paragraph.
+
+Place hidden search keywords, deprecated material, and other less-relevant content at the end of the page.
+
+When a change affects a parallel configuration file (for example, both `mkdocs.yml` and `print_mkdocs.yml`), make the same change in each.
+
 ## Headings
 Headings are denoted by a number of octothorpes (hashes) corresponding to the heading level.
 
@@ -36,7 +46,9 @@ Headings are denoted by a number of octothorpes (hashes) corresponding to the he
 ###### Heading 6 (H6)
 ```
 
-Headings should be written in [title case](https://en.wikipedia.org/wiki/Title_case#Chicago_Manual_of_Style).
+Headings should be written in [title case](https://en.wikipedia.org/wiki/Title_case#Chicago_Manual_of_Style). In a hyphenated compound, capitalise the first element but keep the second element lower case, for example, "Pattern-matching Rules" and "Two-digit Years". (Table captions, by contrast, use sentence case; see [Tables](./tables.md).)
+
+Headings must be meaningful and descriptive; revisit any heading that does not clearly describe its section.
 
 Try to avoid multiple consecutive headings with no intervening text.
 
@@ -47,9 +59,11 @@ Additionally, the MkDocs source may be used to render the documentation in diffe
 ## Italics
 Use italics when:
 
-- introducing a new term
-- naming a function or operator
+- introducing a new term, or using a defined technical term as a gloss, for example, a *shy* result, a *lossy* conversion, the *prototype*, a *pass-through* value
+- naming a function or operator by its English name
 - an algebraic term is being used instead of the number, then it should be italicised to distinguish it from the postscript, for example, "the ith term" or "the nth time".
+
+When naming a primitive, give its English name in italics followed by its glyph in a code span, and link the first mention to the primitive's page, for example, [*format* (`⍕`)](#).
 
 Italics are denoted by single asterisks or underscores surrounding the text.
 
@@ -71,7 +85,8 @@ Bold text is used for:
 - file paths
 - directory and folder names
 - file extensions
-- UI components (not buttons)
+- configuration parameter names (for example, **edit_first_x**)
+- UI components such as menus, menu items, tabs, dialog boxes, checkboxes, and field labels (but not buttons)
 
 ``` { .example }
 Go to the **file** menu
@@ -367,6 +382,8 @@ Inline code and code blocks render in APL font unless the class "language-nonAPL
 
 Syntax highlighting is not enabled.
 
+Use a code span for every APL glyph, system name, code identifier, and literal value, for example, `⎕IO`, `X`, `0`, `1`, and `'en'`. Within a single example, list, or table, treat comparable items consistently: do not put some in a code span and leave others in plain text. Render non-APL literals with the `language-nonAPL` class, for example, <code class="language-nonAPL">true</code>, <code class="language-nonAPL">false</code>, and <code class="language-nonAPL">null</code>.
+
 #### Inline code
 Inline, use `<code>[your code here]</code>` or single backticks `` `[your code here]` ``.
 
@@ -447,6 +464,18 @@ If it is essential, use `<span class="language-apl">` to add code to titles.
 
 ## References
 Always use meaningful link text. Never use "see [here](#)".
+
+Link the first mention of a function, operator, configuration parameter, or defined term to its reference page. When the target is a specific subsection, link to that subsection's anchor, not to the page as a whole.
+
+Do not refer to another part of a document by position. Replace phrases such as "the table below", "the following table", "see above", and "as shown below" with an actual cross-reference to the anchored target (see [Captions and References](./tables.md#captions-and-references)).
+
+Do not over-link. Judge whether a link adds value before adding it, and do not link every item in a set (for example, every sub-option of an option) where doing so would clutter the text.
+
+Do not put a version number in an internal link; start the link after the version segment so that it does not go stale.
+
+Link out to an authoritative external source (for example, an ISO standard or a Wikipedia article) where it helps the reader.
+
+Use a "See also" link to point to a closely related page, such as a companion configuration parameter.
 
 ### Within the same document
 Reference to another section within the same document.
