@@ -465,6 +465,8 @@ If it is essential, use `<span class="language-apl">` to add code to titles.
 ## References
 Always use meaningful link text. Never use "see [here](#)".
 
+Make the term itself the link within the running sentence; do not append a trailing "(see [Name])" parenthetical. (Reserve "See also" for pointing to a separate, closely related page.)
+
 Link the first mention of a function, operator, configuration parameter, or defined term to its reference page. When the target is a specific subsection, link to that subsection's anchor, not to the page as a whole.
 
 Do not refer to another part of a document by position. Replace phrases such as "the table below", "the following table", "see above", and "as shown below" with an actual cross-reference to the anchored target (see [Captions and References](./tables.md#captions-and-references)).
@@ -504,18 +506,18 @@ For more information on the _Clean_ function, see the [_SALT User Guide_](https:
 </div>>
 
 ## Command Codes and Keys
-When referring to keyboard shortcuts, such as those controlled by `⎕KL` on Microsoft Windows, put the code in angle brackets.
+When referring to keyboard shortcuts, such as those controlled by `⎕KL` on Microsoft Windows, put the code in angle brackets and make it bold.
 
-Closing angle brackets must be escaped with a backslash (e.g. `<keycode\>`).
+Closing angle brackets must be escaped with a backslash (e.g. `**<keycode\>**`).
 
 Example
 { .example}
 
 ```
-<TC\> is the command code for trace.
+**<TC\>** is the command code for trace.
 ```
 
-<TC\> is the command code for trace.
+**<TC\>** is the command code for trace.
 { .example-output}
 
 ## Keyboard keys
