@@ -144,7 +144,7 @@ Do not overuse notes. Only use an admonition when the content is a genuine aside
 
 Full stops should be followed by a single space, not a double space.
 
-When using a dash in a sentence, use an en-dash not a hyphen. Write a numeric range with a spaced en-dash, for example, "1 – 2147483647".
+When using a dash in a sentence, use an en-dash not a hyphen. Write a numeric range with an unspaced en-dash, for example, "1–2147483647".
 
 Separate paragraphs with a single blank line. Do not leave two or more consecutive blank lines, as it makes the source messy.
 
