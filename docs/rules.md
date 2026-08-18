@@ -18,15 +18,19 @@ Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore"
 
 Gloss a short code or abbreviation the first time it is shown, for example, "if `Format` is `'D'` (which stands for *Data*)".
 
-Use the Oxford (serial) comma before the final item in a list of three or more items, for example, "the major release, minor release, and build number".
+Use the Oxford (serial) comma before the final item in a list of three or more items, for example, "the major release, minor release, and build number". Do not put a comma before "and" (or "or") when it joins only two items; the serial comma is only for lists of three or more.
 
 Keep the phrasing of parallel items consistent: entries in a list, rows in a table, or the descriptions of two related things should share the same structure and wording so the reader can compare them easily.
 
-State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y".
+State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The one exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".
 
-Use "that" to introduce a restrictive clause and "which" for a non-restrictive one; use "if" for a condition and "whether" for a choice between alternatives.
+Use "that" to introduce a restrictive clause and "which" for a non-restrictive one; use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.
 
 Do not use "for example" and "and so on" in the same list: give a few examples or trail off with "and so on", but not both.
+
+Do not open a sentence with an ambiguous "It ..."; start with "This ..." or the specific noun so the subject is clear.
+
+Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly.
 
 ## Terminology
 
@@ -53,8 +57,18 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |Boolean|boolean|
 |UNIX|Unix, unix|
 |configuration parameter|environment variable|
+|32-bit width, 64-bit width (of the interpreter)|32-bit, 64-bit (as a noun)|
+|curly braces (curly brackets)|braces alone|
 
 "Editor" and "Debugger" name the tools; "Edit window" and "Trace window" name individual windows. Use "Session window" when you mean the window; bare "Session" is ambiguous, as it can also mean the session file, the session object (`⎕SE`), or the running interpreter. When introducing a configuration parameter, use the full term "configuration parameter", not just "parameter".
+
+Write a version with a lower-case "v", for example, "v19.0", not "V19.0".
+
+"System function" is the umbrella term: use it even for the sub-categories, as a system variable or system constant is still a system function; this keeps the documentation consistent.
+
+Write "variant operator" and "variant option" in lower case (capitalised only at the start of a sentence), and italicise the operator itself as the _variant_ operator.
+
+Name a context specifically: avoid the vague "In APL" and write, for example, "In the Session".
 
   
 Best practice:
@@ -83,7 +97,7 @@ Syntax:
 
 Industry-standard abbreviations and acronyms can be used without explanation, for example, HTTP or XML.
 
-When you use an acronym that is not an industry standard for the first time, write the full word or phrase in its entirety and then enclose its abbreviation or acronym in parentheses. Afterwards, use the abbreviation or acronym alone. For example, "...the Dyalog Remote Communicator (DRC). The DRC can be...".
+When you use an acronym that is not an industry standard for the first time, write the full word or phrase in its entirety and then enclose its abbreviation or acronym in parentheses. Afterwards, use the abbreviation or acronym alone. For example, "...the Dyalog Remote Communicator (DRC). The DRC can be...". When you expand an acronym, capitalise the letters that form it to show its origin, for example, "Globally Unique IDentifier (GUID)".
 
 ## Ordinal Numbers
 
@@ -114,6 +128,8 @@ Use full stops for your list items if they complete a sentence (in this situatio
 
 A list is not a single sentence split across its items. Where the items share a common logic, state it once in the lead-in line (or an admonition) above the list and let each item stand alone, rather than stringing the items together with connective phrases or trailing semicolons. For example, introduce a precedence order with "Each source overrides those below it:" and then list the bare source names.
 
+Do not use a numbered list where the numbering could imply an order or precedence that does not exist; use a bulleted list. If the numbers are genuinely part of each item's name, fold them into the item text and keep the list bulleted.
+
 ## Third-party Products
 
 Legally, the owner of the product ought to be included the first time that a product is mentioned - this applies to every paragraph. For example, when writing about something that's on the Windows system, "Microsoft Windows" must be used the first time in the paragraph and just "Windows" can be used after that. However, if Windows is referred to in the subsequent paragraph, it needs to be "Microsoft Windows" again.
@@ -123,6 +139,17 @@ Legally, the owner of the product ought to be included the first time that a pro
 State a parameter's default value inline, in parentheses, for example, "(the default)".
 
 Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, the default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
+
+Introduce a function's arguments and result with consistent lead phrasing, for example, "`Y` is specified as either a character vector or a vector of character vectors", "The result `R` is a two-element vector consisting of ...", or "`X` must be omitted". Argument and result names (`X`, `Y`, `R`) are set in code spans wherever they appear, in prose as well as in code.
+
+Where an argument or option takes a set of values, list them as "value – meaning" pairs (en-dash) and mark the default inline, for example:
+
+- `0` – sub-directories are not scanned (this is the default).
+- `1` – sub-directories are scanned.
+
+### Variant Options
+
+A system function's variant options are documented under a "Variant Options" H2, with each option as an H3 named "Variant Option: &lt;Name&gt;". Set option names in bold in prose (as for a parameter), open each with "The **&lt;Name&gt;** variant option ...", state the value constraints, and end with "The default is &lt;value&gt;." (state it plainly, not as "... if not specified"). Name the principal option explicitly ("The principal option is **Wildcard**"); if there is none, write "There is no principal option". State an absent option's assumed value, for example, "if **Unique** is not present, it is assumed to be `0`".
 
 ## Deprecations
 
@@ -134,21 +161,23 @@ Describe a deprecated feature consistently:
 
 For example: "`739⌶` has been deprecated and is scheduled for removal in a future release. Its functionality is now provided by [`⎕SYSTEM.Directories.Temp`](#)."
 
+A feature that still works but is superseded is different from a deprecated one: describe it with the fixed phrase "retained for backwards compatibility purposes" and, where it is an aside, present it in a `!!! Legacy "Legacy"` admonition.
+
 ## Notes
 
 Various icons are used in the documentation to emphasise specific material. Notes are also used to differentiate between operating-system-specific behaviour in cross-platform documents. See [Notes](./style.md#notes).
 
-Do not overuse notes. Only use an admonition when the content is a genuine aside (a hint, a warning, a piece of information set apart from the main flow). Content that belongs in the main narrative should be written as an ordinary paragraph, not wrapped in an admonition.
+Do not overuse notes. Only use an admonition when the content is a genuine aside (a hint, a warning, a piece of information set apart from the main flow). Content that belongs in the main narrative should be written as an ordinary paragraph, not wrapped in an admonition. In particular, do not use a Warning for a condition that merely raises an error message (for example, giving a name in the wrong case); write it as an ordinary sentence.
 
 ## Miscellaneous
 
-Full stops should be followed by a single space, not a double space.
+Full stops should be followed by a single space, not a double space. Do not put a space before a full stop or comma, including immediately after a code span.
 
 When using a dash in a sentence, use an en-dash not a hyphen. Write a numeric range with an unspaced en-dash, for example, "1–2147483647".
 
 Separate paragraphs with a single blank line. Do not leave two or more consecutive blank lines, as it makes the source messy.
 
-Number footnotes in the order in which they are first referenced on the page.
+Number footnotes in the order in which they are first referenced on the page. Better still, avoid footnotes: put essential information in the text and cut the rest.
 
 Refer to files supplied under the installation directory using the `[DYALOG]` placeholder, for example, **[DYALOG]/ws/dfns.dws**.
 
@@ -163,5 +192,5 @@ Make sure visible (rendered) parentheses are balanced.
 ## Libraries: Operating System Differences
 
 - Microsoft Windows: Dynamic Link Library (.dll)
-- Linux/UNIX: Shared/static library (.so)
-- macOS: Shared/static library (.a)
+- Linux or macOS: Shared library (.so or .dylib)
+- AIX: Static library (.a)

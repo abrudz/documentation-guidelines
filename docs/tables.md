@@ -44,6 +44,12 @@ When there is no other natural order, list the rows of a reference table in alph
 
 Introduce a table with a sentence that says what it summarises. Where fuller detail follows the table, say so, for example, "each option is described in more detail below the table".
 
+Keep terminal punctuation consistent across parallel cells, matching the neighbouring entries, and remove any stray trailing space at the end of a cell.
+
+When a reference table mixes functions and operators, group all functions before all operators rather than interleaving them by another sort key.
+
+Give a value table, such as a variant-option or flags table, a heading row, and mark the row that holds the default value with the `{ .shaded }` attribute.
+
 ## Captions and References
 
 To caption a table, add a line beginning with "Table&#58; " just before the table (separated from the table by a blank line), and assign an id using an attribute list. Write the caption in sentence case, capitalising only the first word and any proper nouns, for example, "Time numbers" or "Built-in languages":
