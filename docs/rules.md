@@ -171,6 +171,14 @@ Various icons are used in the documentation to emphasise specific material. Note
 
 Do not overuse notes. Only use an admonition when the content is a genuine aside (a hint, a warning, a piece of information set apart from the main flow). Content that belongs in the main narrative should be written as an ordinary paragraph, not wrapped in an admonition. In particular, do not use a Warning for a condition that merely raises an error message (for example, giving a name in the wrong case); write it as an ordinary sentence.
 
+## Links
+
+When linking within a sub-site (from one page to another in the same guide, for example, within the _Language Reference Guide_), reference the target file by its path including the `.md` extension, for example, `[Notes](../primitive-functions/notes.md)`. This form is always safe: the file is resolved and rewritten to the correct URL.
+
+When linking between sub-sites (from one guide to another), use the extension-less directory form, for example, `[⎕SIGNAL](../../language-reference-guide/system-functions/signal/)`.
+
+Using the file form for sub-site-internal links and the directory form for cross-sub-site links gives a useful practical distinction: the presence of a `.md` extension shows at a glance whether a link stays within the current guide.
+
 ## Miscellaneous
 
 Full stops should be followed by a single space, not a double space. Do not put a space before a full stop or comma, including immediately after a code span.
