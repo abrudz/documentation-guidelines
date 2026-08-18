@@ -92,7 +92,6 @@ Bold text is used for:
 - directory and folder names
 - file extensions
 - configuration parameter names (for example, **edit_first_x**)
-- variant option names (for example, **Wildcard**)
 - UI components such as menus, menu items, tabs, dialog boxes, checkboxes, and field labels (but not buttons)
 
 ``` { .example }
@@ -376,7 +375,7 @@ Introduce full examples with:
 <h* class="example">Example</h*>
 ```
 
-Where `<h*>` is a heading one level below the containing section. You must use an HTML `<h>` tag, both to include the `example` class and because headings written in HTML will not appear in the table of contents.
+Where `<h*>` is a heading one level below the containing section. You must use an HTML `<h>` tag, both to include the `example` class and because headings written in HTML will not appear in the table of contents. Use "Example" for a single example and "Examples" when the section contains more than one.
 
 Exception – if there are several consecutive examples illustrating different things, they can each be introduced with "Example: <text\>" if that helps to clarify things for the reader. Precede every example, and every example sub-heading, with a brief explanation of what it demonstrates; do not show output for its own sake. An example's label may carry a platform qualifier, for example, "Example (Microsoft Windows)".
 

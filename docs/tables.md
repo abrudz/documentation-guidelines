@@ -48,7 +48,7 @@ Keep terminal punctuation consistent across parallel cells, matching the neighbo
 
 When a reference table mixes functions and operators, group all functions before all operators rather than interleaving them by another sort key.
 
-Give a value table, such as a variant-option or flags table, a heading row, and mark the row that holds the default value with the `{ .shaded }` attribute.
+Give a value table, such as a variant-option or flags table, a heading row, and mark the default value in its cell with `<small>(default)</small>`.
 
 ## Captions and References
 

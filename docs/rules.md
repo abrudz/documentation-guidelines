@@ -58,7 +58,9 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |UNIX|Unix, unix|
 |configuration parameter|environment variable|
 |32-bit width, 64-bit width (of the interpreter)|32-bit, 64-bit (as a noun)|
-|curly braces (curly brackets)|braces alone|
+|curly braces `{ }`|curly brackets|
+|round parentheses `( )`|round brackets|
+|square brackets `[ ]`|square braces|
 
 "Editor" and "Debugger" name the tools; "Edit window" and "Trace window" name individual windows. Use "Session window" when you mean the window; bare "Session" is ambiguous, as it can also mean the session file, the session object (`⎕SE`), or the running interpreter. When introducing a configuration parameter, use the full term "configuration parameter", not just "parameter".
 
@@ -136,20 +138,20 @@ Legally, the owner of the product ought to be included the first time that a pro
 
 ## Describing Parameters and Values
 
-State a parameter's default value inline, in parentheses, for example, "(the default)".
+State a parameter's default value inline, in parentheses, for example, "(default)". In a table's value column, mark it as `<small>(default)</small>`.
 
-Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, the default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
+Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
 
 Introduce a function's arguments and result with consistent lead phrasing, for example, "`Y` is specified as either a character vector or a vector of character vectors", "The result `R` is a two-element vector consisting of ...", or "`X` must be omitted". Argument and result names (`X`, `Y`, `R`) are set in code spans wherever they appear, in prose as well as in code.
 
 Where an argument or option takes a set of values, list them as "value – meaning" pairs (en-dash) and mark the default inline, for example:
 
-- `0` – sub-directories are not scanned (this is the default).
+- `0` – sub-directories are not scanned (default).
 - `1` – sub-directories are scanned.
 
 ### Variant Options
 
-A system function's variant options are documented under a "Variant Options" H2, with each option as an H3 named "Variant Option: &lt;Name&gt;". Set option names in bold in prose (as for a parameter), open each with "The **&lt;Name&gt;** variant option ...", state the value constraints, and end with "The default is &lt;value&gt;." (state it plainly, not as "... if not specified"). Name the principal option explicitly ("The principal option is **Wildcard**"); if there is none, write "There is no principal option". State an absent option's assumed value, for example, "if **Unique** is not present, it is assumed to be `0`".
+A system function's variant options are documented under a "Variant Options" H2, with each option as an H3 named "Variant Option: `<Name>`". Set option names and their values in code font (`Wildcard`, `0`), open each with "The `<Name>` variant option ...", state the value constraints, and end with "The default is `<value>`." (state it plainly, not as "... if not specified"). Name the principal option explicitly ("The principal option is `Wildcard`"); if there is none, write "There is no principal option". State an absent option's assumed value, for example, "if `Unique` is not present, it is assumed to be `0`".
 
 ## Deprecations
 
