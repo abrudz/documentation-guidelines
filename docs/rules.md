@@ -32,6 +32,14 @@ Do not open a sentence with an ambiguous "It ..."; start with "This ..." or the 
 
 Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly.
 
+Write "whether" rather than "whether or not"; keep "or not" only where both values are given, as in "whether (`1`) or not (`0`)".
+
+Do not preface a sentence with "Note that" or "Note also that", nor say "in order to" where "to" suffices; state the point directly.
+
+Do not use capitalisation for emphasis: write "only", not "ONLY".
+
+Set an introductory subordinate clause off with a comma, for example, "If `Ragged` is not set, then ...", "..., even if ...", and open a consequence with "Similarly, ...".
+
 ## Terminology
 
 The following table lists correct terminology and terms to avoid. A complete list of the [approved names for glyphs and primitive functions/operators](https://docs.dyalog.com/latest/CheatSheet%20-%20Nomenclature%20-%20Functions%20and%20Operators.pdf) is also available.
@@ -62,13 +70,13 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |round parentheses `( )`|round brackets|
 |square brackets `[ ]`|square braces|
 
-"Editor" and "Debugger" name the tools; "Edit window" and "Trace window" name individual windows. Use "Session window" when you mean the window; bare "Session" is ambiguous, as it can also mean the session file, the session object (`⎕SE`), or the running interpreter. When introducing a configuration parameter, use the full term "configuration parameter", not just "parameter".
+"Editor" and "Debugger" name the tools; "Edit window" and "Trace window" name individual windows. Use "Session window" when you mean the window; bare "Session" is ambiguous, as it can also mean the session file, the session object (`⎕SE`), or the running interpreter. When introducing a configuration parameter, use the full term "configuration parameter", not just "parameter". Link a configuration parameter inline to its own page (for example, `configuration-parameters/cfext/`), not to the general configuration-parameters page.
 
 Write a version with a lower-case "v", for example, "v19.0", not "V19.0".
 
 "System function" is the umbrella term: use it even for the sub-categories, as a system variable or system constant is still a system function; this keeps the documentation consistent.
 
-Write "variant operator" and "variant option" in lower case (capitalised only at the start of a sentence), and italicise the operator itself as the _variant_ operator.
+Write "variant operator" and "variant option" in lower case (capitalised only at the start of a sentence), and italicise the operator itself as the _variant_ operator. Refer to an option as a "variant option", not a bare "variant".
 
 Name a context specifically: avoid the vague "In APL" and write, for example, "In the Session".
 
@@ -151,13 +159,16 @@ Where an argument or option takes a set of values, list them as "value – meani
 
 ### Variant Options
 
-A system function's variant options are documented under a "Variant Options" H2, with each option as an H3 named "Variant Option: `<Name>`". Set option names and their values in code font (`Wildcard`, `0`), open each with "The `<Name>` variant option ...", state the value constraints, and end with "The default is `<value>`." (state it plainly, not as "... if not specified"). Name the principal option explicitly ("The principal option is `Wildcard`"); if there is none, write "There is no principal option". State an absent option's assumed value, for example, "if `Unique` is not present, it is assumed to be `0`".
+A system function's variant options are documented under a "Variant Options" H2, with each option as an H3 named "Variant Option: `<Name>`". Set option names and their values in code font (`Wildcard`, `0`), open each with "The `<Name>` variant option ...", state the value constraints, and end with "The default is `<value>`." (state it plainly, not as "... if not specified"). Name the principal option explicitly ("The principal option is `Wildcard`"); if there is none, write "There is no principal option". State an absent option's assumed value, for example, "if `Unique` is not present, it is assumed to be `0`". 
+
+Open the H2 with an introductory line that is consistent across all the system-function pages: name the _variant_ operator, list the options (in code font, with a serial comma), and link to a captioned summarising table by an empty cross-reference, for example, "`⎕FCHK` supports three variant options, `Task`, `Repair`, and `Force`, specified using the _variant_ operator [`⍠`](#), summarised in [](#variantoptionsforfchk), and described in detail beneath it. The principal option is `Repair`." Give that table a caption, "Table: Variant options for `⎕FCHK` { #variantoptionsforfchk }". When several options share one H3, the heading stays singular: "Variant Option: `A`, `B`, and `C`".
 
 ## Deprecations
 
 Describe a deprecated feature consistently:
 
 - state that it has been deprecated and is scheduled for removal in a future release;
+- do not date the deprecation with a version (avoid "from Version 16.0"); state what is true now;
 - name the replacement (or the configuration parameter that reinstates the previous behaviour) and link to it;
 - link to the relevant _Release Notes_ for guidance on identifying the deprecated usage in existing code.
 
