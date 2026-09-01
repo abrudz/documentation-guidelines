@@ -275,20 +275,20 @@ Notes are also used to differentiate between operating-system-specific behaviour
     
     </div>
 
-- Dyalog on UNIX
+- Dyalog on Unix
 
-    Behaviour specific to Dyalog on UNIX
+    Behaviour specific to Dyalog on Unix
 
     <p class="example">example</p>
 
     ```
-    !!! unix "Dyalog on UNIX"
+    !!! unix "Dyalog on Unix"
         By default, the cache file is located in **$HOME/.dyalog/**
     ```
 
     <div class="example-output" markdown="1">
 
-    !!! unix "Dyalog on UNIX"
+    !!! unix "Dyalog on Unix"
         By default, the cache file is located in **$HOME/.dyalog/**
     
     </div>
@@ -416,12 +416,12 @@ The average of a vector (`+⌿÷≢`) is the sum divided by the tally.
 <p class="example">Example: non-APL code</p>
 
 ```html
-<code class="language-nonAPL">getpid()</code> is common to all UNIX platforms.
+<code class="language-nonAPL">getpid()</code> is common to all Unix platforms.
 ```
 
 <div class="example-output" markdown="1">
 
-<code class="language-nonAPL">getpid()</code> is common to all UNIX platforms.
+<code class="language-nonAPL">getpid()</code> is common to all Unix platforms.
 
 </div>>
 

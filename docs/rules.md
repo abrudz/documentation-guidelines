@@ -63,7 +63,7 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |note|NB, N.B.|
 |and so on|etc, etc.|
 |Boolean|boolean|
-|UNIX|Unix, unix|
+|Unix|UNIX, unix|
 |configuration parameter|environment variable|
 |32-bit width, 64-bit width (of the interpreter)|32-bit, 64-bit (as a noun)|
 |curly braces `{ }`|curly brackets|
@@ -143,6 +143,8 @@ Do not use a numbered list where the numbering could imply an order or precedenc
 ## Third-party Products
 
 Legally, the owner of the product ought to be included the first time that a product is mentioned - this applies to every paragraph. For example, when writing about something that's on the Windows system, "Microsoft Windows" must be used the first time in the paragraph and just "Windows" can be used after that. However, if Windows is referred to in the subsequent paragraph, it needs to be "Microsoft Windows" again.
+
+Write "Unix", not "UNIX", when referring generically to non-Windows systems: "UNIX" is a trademark and names the certified operating system rather than the family. Product names keep their own spelling, so AIX remains "AIX".
 
 ## Describing Parameters and Values
 
