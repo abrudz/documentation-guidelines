@@ -34,7 +34,7 @@ Do not use "for example" and "and so on" in the same list: give a few examples o
 
 Do not open a sentence with an ambiguous "It ..."; start with "This ..." or the specific noun so the subject is clear.
 
-Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly.
+Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly. Drop "actually" and "in fact" where the sentence already carries the contrast, for example, in "however, the event is actually reported by each page".
 
 Write "whether" rather than "whether or not"; keep "or not" only where both values are given, as in "whether (`1`) or not (`0`)".
 
@@ -197,6 +197,8 @@ When linking within a sub-site (from one page to another in the same guide, for 
 When linking between sub-sites (from one guide to another), use the extension-less directory form, for example, `[⎕SIGNAL](../../language-reference-guide/system-functions/signal/)`.
 
 Using the file form for sub-site-internal links and the directory form for cross-sub-site links gives a useful practical distinction: the presence of a `.md` extension shows at a glance whether a link stays within the current guide.
+
+Punctuation that belongs to the sentence goes outside the link text, not inside it. Write "[Chromium Embedded Framework (CEF)](https://example.com)." rather than "[Chromium Embedded Framework (CEF).](https://example.com)". Link only the words that name the target, so a trailing full stop, comma, or closing bracket stays unlinked.
 
 ## Miscellaneous
 
