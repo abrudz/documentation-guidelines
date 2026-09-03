@@ -8,6 +8,8 @@ Abbreviations should not be used (for example, shouldn't, can't, won't) and neit
 
 Address the reader as "you". Do not write in the first person: "you will see later that ..." rather than "we shall see later that ...".
 
+Describe behaviour in the present tense: "clicking the column heading sorts the list", not "will sort the list". The future tense is acceptable where it reads more naturally, or where it is genuinely about something that happens later.
+
 Although the documents are not currently translated, they should be written as if they could be. That means consideration of the language used...can it be understood and translated unambiguously? For example, "configure" should be used rather than "set up" as "set up" can be misunderstood. This might sound silly, but translation is not always done in context, and people can put single words into Google Translate (for example) and get random results! Idioms, colloquialisms, and foreign expressions (including Latin) should also be avoided; for example, use "exactly" or "precisely" rather than the Latin "verbatim".
 
 Language style will vary between documents. For example, the Language Reference Guide needs to be very precise and official whereas a User Guide can include less formal statements such as "You might notice that...".
