@@ -161,6 +161,8 @@ Write "Unix", not "UNIX", when referring generically to non-Windows systems: "UN
 
 State a parameter's default value inline, in parentheses, for example, "(default)". In a table's value column, mark it as `<small>(default)</small>`.
 
+A configuration parameter's page carries as many of these blocks as apply, in this order: any restriction on when the parameter is relevant; the description, linking the system functions, parameters, and concepts it mentions; the valid values; the default; and links to related parameters. Open the description with "Whether ..." for a Boolean parameter and "The ..." for one that names a path or a value, rather than "This parameter specifies ...".
+
 Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
 
 Introduce a function's arguments and result with consistent lead phrasing, for example, "`Y` is specified as either a character vector or a vector of character vectors", "The result `R` is a two-element vector consisting of ...", or "`X` must be omitted". Argument and result names (`X`, `Y`, `R`) are set in code spans wherever they appear, in prose as well as in code.
