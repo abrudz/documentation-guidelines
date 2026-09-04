@@ -108,6 +108,10 @@ Used to create links to other parts of the same document, [other documents](#ref
 
 Link text is surrounded by square brackets and the link URL is in round parentheses.
 
+Link text carries no leading or trailing space: write `[StatusOnEdit](...)`, never `[ StatusOnEdit](...)`. The stray space is rendered as part of the link, so it underlines oddly and makes the link text no longer match the thing it names.
+
+Where the link text names a field, tab, or other part of the interface, it must match the software exactly. If the link text instead describes the destination, say what the reader will arrive at, as in "the **⎕WX** field on the **Session** tab", rather than naming the field alone and leaving the reader to guess where it lives.
+
 ### Internal links
 Links can use text other than the URL when linking to:
 

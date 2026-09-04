@@ -26,6 +26,10 @@ Use the Oxford (serial) comma before the final item in a list of three or more i
 
 Keep the phrasing of parallel items consistent: entries in a list, rows in a table, or the descriptions of two related things should share the same structure and wording so the reader can compare them easily.
 
+When documenting an interface, present its parts in the order the software presents them. Sections describing the tabs of a dialog box follow the tab order, and rows describing the fields of a tab follow the order of the fields. A reader working through the dialog box should be able to work down the page in step with it.
+
+When you change or move documentation of an interface, check that every cross-reference into it still names something that exists. A reference to a field that has since been renamed or removed is worse than no reference, because it sends the reader looking for something that is not there.
+
 State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The one exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".
 
 Use "that" to introduce a restrictive clause and "which" for a non-restrictive one; use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.
@@ -60,6 +64,7 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |.NET|.Net, .net, any other variation|
 |dfn (Dfn when starting a sentence)|dynamic function, d-fn, D-fn, Dfn (unless starting a sentence)|
 |dop (Dop when starting a sentence)|dynamic operator, d-op, D-op|
+|dialog box|dialog (as a noun)|
 |Edit window (a window); the Editor (the tool)|Edit Window|
 |Trace window (a window); the Debugger (the tool, docked in Standard mode)|Trace Window, Tracer|
 |for example|eg, e.g., eg.|

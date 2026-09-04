@@ -74,6 +74,8 @@ Table: Cells with content { #MyTable }
 
 You, the author, are responsible for choosing a unique table id (the `#MyTable` in this case) which is unique and appropriate for the table.
 
+Where a table documents one part of a larger thing, the caption names both, so that the caption identifies the table on its own. Write "Table: Configuration dialog box – General tab" rather than "Table: General", and where a tab is divided into panels, name the panel too, as in "Table: Configuration dialog box – Windows tab (Edit Windows panel)". Separate the container from the part with an en-dash.
+
 To reference a table based on its id, insert a Markdown link to the id, with an empty anchor:
 
 <pre>
