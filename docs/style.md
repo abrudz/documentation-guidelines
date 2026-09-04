@@ -398,6 +398,8 @@ This is an example
 ## Code
 Inline code and code blocks render in APL font unless the class "language-nonAPL" is used.
 
+End the sentence that introduces a code block with a colon, not a full stop, so that the block reads as part of it. Where the sentence would otherwise end and a separate remark follows, join them with a semicolon and keep the colon at the end, as in "You can change MultiLine dynamically, using `⎕WS`:".
+
 Syntax highlighting is not enabled.
 
 Use a code span for every APL glyph, system name, code identifier, and literal value, for example, `⎕IO`, `X`, `0`, `1`, and `'en'`. Within a single example, list, or table, treat comparable items consistently: do not put some in a code span and leave others in plain text. Render non-APL literals with the `language-nonAPL` class, for example, <code class="language-nonAPL">true</code>, <code class="language-nonAPL">false</code>, and <code class="language-nonAPL">null</code>. Choose the font by the token's language: APL names and expressions go in an APL code span, while foreign type, class, and interface names (for example, .NET types) go in `language-nonAPL`, and file names go in bold. Do not place a code span inside an `example`-class element; the combination renders badly.
