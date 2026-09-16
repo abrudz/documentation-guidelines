@@ -151,6 +151,19 @@ A list is not a single sentence split across its items. Where the items share a 
 
 Do not use a numbered list where the numbering could imply an order or precedence that does not exist; use a bulleted list. If the numbers are genuinely part of each item's name, fold them into the item text and keep the list bulleted.
 
+## Code Blocks
+
+Leave a blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single `<p>`, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.
+
+```markdown
+Correct:
+
+      1
+
+Wrong:
+      2
+```
+
 ## Third-party Products
 
 Legally, the owner of the product ought to be included the first time that a product is mentioned - this applies to every paragraph. For example, when writing about something that's on the Windows system, "Microsoft Windows" must be used the first time in the paragraph and just "Windows" can be used after that. However, if Windows is referred to in the subsequent paragraph, it needs to be "Microsoft Windows" again.
