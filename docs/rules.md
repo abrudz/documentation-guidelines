@@ -212,7 +212,12 @@ Describe a deprecated feature consistently:
 
 For example: "`739⌶` has been deprecated and is scheduled for removal in a future release. Its functionality is now provided by [`⎕SYSTEM.Directories.Temp`](#)."
 
-A feature that still works but is superseded is different from a deprecated one: describe it with the fixed phrase "retained for backwards compatibility purposes" and, where it is an aside, present it in a `!!! Legacy "Legacy"` admonition.
+A feature that still works but is superseded is different from a deprecated one, and the two are written differently. What separates them is whether the feature is going away.
+
+- Superseded and scheduled for removal: describe it with the fixed phrase "retained for backwards compatibility purposes" and, where it is an aside, present it in a `!!! Legacy "Legacy"` admonition. The box is the warning that the feature is going away.
+- Superseded but staying indefinitely: do not use an admonition. Name the newer feature in the flow of the text, as a positive statement of what that feature offers, for example "A newer system function, [`⎕ATX`](#), can be used instead: it is a superset of `⎕AT`, reporting many more attributes, on more kinds of name, and only the ones asked for."
+
+A Legacy box on a feature that is not going away reads as a warning that it is, which alarms readers and invites questions the documentation then has to answer. It also interrupts a page to say something that belongs in its narrative.
 
 ## Notes
 

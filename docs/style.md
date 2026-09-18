@@ -242,7 +242,7 @@ Notes are used to highlight important information.
 
 - Legacy
 
-    Legacy information pertaining to behaviour in earlier releases of Dyalog or to functionality that still exists but has been superseded and is no longer recommended
+    Legacy information pertaining to behaviour in earlier releases of Dyalog, or to superseded functionality that still exists but is scheduled for removal. Functionality that is superseded yet staying indefinitely does not take this note; see [Deprecations](./rules.md#deprecations)
 
     <p class="example">example</p>
 
