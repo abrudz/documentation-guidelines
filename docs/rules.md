@@ -87,6 +87,10 @@ Write a version with a lower-case "v", for example, "v19.0", not "V19.0".
 
 Write "variant operator" and "variant option" in lower case (capitalised only at the start of a sentence), and italicise the operator itself as the _variant_ operator. Refer to an option as a "variant option", not a bare "variant".
 
+Write the common nouns that name language concepts in lower case, capitalised only at the start of a sentence: class, instance, interface, base class, namespace, method, property, field, event, constructor, destructor, and the like. They are ordinary nouns, not proper ones, and capitalising them mid-sentence gives them a weight they do not carry.
+
+Name a specific entity by its name, in code font, and leave the concept noun in lower case: write "the `Parrot` class", "an instance of `DomesticParrot`", and "the `BirdBehaviour` interface", not "the Parrot Class" or "Interface `BirdBehaviour`".
+
 Name a context specifically: avoid the vague "In APL" and write, for example, "In the Session".
 
   
