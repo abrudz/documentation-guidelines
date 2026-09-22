@@ -42,7 +42,7 @@ You can also create row-, and col-spans with easily accessible syntax. See the [
 
 ## Captions and References
 
-To caption a table, add a line beginning with "Table: " just before the table, and assign an id using an attribute list:
+To caption a table, add a line beginning with "Table&#58; " just before the table, and assign an id using an attribute list:
 
 <pre>
 Table&#58; Cells with content { #MyTable }
