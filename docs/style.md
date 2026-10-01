@@ -98,6 +98,8 @@ Bold text is used for:
 Go to the **file** menu
 ```
 
+Write a path through menus, tabs or dialog boxes as its successive items in bold, separated by a greater-than sign, and reproduce each label exactly as the software shows it, including any trailing ellipsis: **Options** > **Configure...** rather than `Options/Configure/Keyboard Shortcuts`.
+
 Go to the **file** menu
 { .example-output}
 

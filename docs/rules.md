@@ -38,13 +38,15 @@ Do not use "for example" and "and so on" in the same list: give a few examples o
 
 Do not open a sentence with an ambiguous "It ..."; start with "This ..." or the specific noun so the subject is clear.
 
-Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly. Drop "actually" and "in fact" where the sentence already carries the contrast, for example, in "however, the event is actually reported by each page".
+Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly. Drop "actually" and "in fact" where the sentence already carries the contrast, for example, in "however, the event is actually reported by each page". Drop intensifiers that add nothing to a statement that is already absolute: "the same effect", not "exactly the same effect".
 
 Write "whether" rather than "whether or not"; keep "or not" only where both values are given, as in "whether (`1`) or not (`0`)".
 
 Do not preface a sentence with "Note that" or "Note also that", nor say "in order to" where "to" suffices; state the point directly.
 
-Do not use capitalisation for emphasis: write "only", not "ONLY".
+Do not use capitalisation for emphasis: write "only", not "ONLY". The same applies to a term set in capitals to mark it as a term: write "the session", "an external array", and "`⎕FCOPY` compacts the file", italicising the term on first use if it needs marking, rather than "SESSION", "EXTERNAL ARRAY" and "APL COMPACTS".
+
+Hyphenate a compound modifier before the noun it qualifies, and leave its elements in lower case: "operating-system-specific conventions", "a well-established convention". Without the hyphens the reader has to work out which words group together.
 
 Set an introductory subordinate clause off with a comma, for example, "If `Ragged` is not set, then ...", "..., even if ...", and open a consequence with "Similarly, ...".
 
