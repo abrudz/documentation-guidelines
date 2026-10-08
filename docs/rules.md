@@ -18,7 +18,7 @@ Do **not** use an apostrophe when pluralising an acronym ("CPU's today are..." =
 
 Try to make documents future-proof (especially with respect to dates/version numbers, "coming soon", and so on). Variables can help with this!
 
-Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect".
+Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect". Write "the only" to state that something is unique: "`⎕TRAP` is the only system variable that ...", not "the one system variable that ...", which reads as informal and can be taken as a count.
 
 Gloss a short code or abbreviation the first time it is shown, for example, "if `Format` is `'D'` (which stands for *Data*)".
 
@@ -30,9 +30,9 @@ When documenting an interface, present its parts in the order the software prese
 
 When you change or move documentation of an interface, check that every cross-reference into it still names something that exists. A reference to a field that has since been renamed or removed is worse than no reference, because it sends the reader looking for something that is not there.
 
-State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The one exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".
+State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The only exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".
 
-Use "that" to introduce a restrictive clause and "which" for a non-restrictive one; use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.
+Use "that" to introduce a restrictive clause and "which" for a non-restrictive one, and do not set off with commas a phrase the sentence needs: in "Localising it by naming it in a function header gives it an empty value", the phrase says which localising is meant, and commas round it would mark it as removable and separate the subject from its verb. Use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.
 
 Do not use "for example" and "and so on" in the same list: give a few examples or trail off with "and so on", but not both.
 

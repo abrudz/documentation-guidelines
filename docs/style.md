@@ -65,7 +65,7 @@ Additionally, the MkDocs source may be used to render the documentation in diffe
 ## Italics
 Use italics when:
 
-- introducing a new term, or using a defined technical term as a gloss, for example, a *shy* result, a *lossy* conversion, the *prototype*, a *pass-through* value
+- introducing a new term, or using a defined technical term as a gloss, for example, a *shy* result, a *lossy* conversion, the *prototype*, a *pass-through* value. Mark the term with italics, not quotation marks, for example, "This feature is known as *pass-through localisation*"
 - naming a function or operator by its English name
 - an algebraic term is being used instead of the number, then it should be italicised to distinguish it from the postscript, for example, "the ith term" or "the nth time".
 
