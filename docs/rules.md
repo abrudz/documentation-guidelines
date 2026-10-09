@@ -20,6 +20,12 @@ Try to make documents future-proof (especially with respect to dates/version num
 
 Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect". Write "the only" to state that something is unique: "`⎕TRAP` is the only system variable that ...", not "the one system variable that ...", which reads as informal and can be taken as a count.
 
+Do not join a statement to its consequence or its explanation with ", so" or a colon in running prose. End the sentence and begin the next with a connective that names the relationship: write "A line break is a separator. This means that a parenthesis continues onto the next line", not "A line break is a separator, so a parenthesis continues", and "A dfn does not fix. Instead, `⎕FX` returns an integer", not "A dfn does not fix: `⎕FX` returns an integer". A colon still introduces a code block, a list, or a table.
+
+Put "However," at the start of its sentence, not inside it: "However, an opening parenthesis on one line ...", not "An opening parenthesis on one line, however, ...".
+
+Do not let "one" stand for a noun from earlier in the sentence; repeat the noun. Write "lines that would each give an error run together without generating an error", not "... run together without one".
+
 Gloss a short code or abbreviation the first time it is shown, for example, "if `Format` is `'D'` (which stands for *Data*)".
 
 Use the Oxford (serial) comma before the final item in a list of three or more items, for example, "the major release, minor release, and build number". Do not put a comma before "and" (or "or") when it joins only two items; the serial comma is only for lists of three or more.
