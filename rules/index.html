@@ -350,6 +350,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#apl-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APL Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-blocks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -687,6 +698,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#apl-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APL Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-blocks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -832,20 +854,24 @@
 <p>Language style will vary between documents. For example, the Language Reference Guide needs to be very precise and official whereas a User Guide can include less formal statements such as "You might notice that...".</p>
 <p>Do <strong>not</strong> use an apostrophe when pluralising an acronym ("CPU's today are..." = WRONG)</p>
 <p>Try to make documents future-proof (especially with respect to dates/version numbers, "coming soon", and so on). Variables can help with this!</p>
-<p>Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect".</p>
+<p>Write so that a sentence cannot be misread. Avoid "so" when you mean "therefore", which is ambiguous; use "therefore", "meaning that", or another unambiguous connective. Set connectives such as "therefore" and "that is" off with commas, for example, "the setting is, therefore, still in effect". Write "the only" to state that something is unique: "<code>⎕TRAP</code> is the only system variable that ...", not "the one system variable that ...", which reads as informal and can be taken as a count.</p>
+<p>Do not join a statement to its consequence or its explanation with ", so" or a colon in running prose. End the sentence and begin the next with a connective that names the relationship: write "A line break is a separator. This means that a parenthesis continues onto the next line", not "A line break is a separator, so a parenthesis continues", and "A dfn does not fix. Instead, <code>⎕FX</code> returns an integer", not "A dfn does not fix: <code>⎕FX</code> returns an integer". A colon still introduces a code block, a list, or a table.</p>
+<p>Put "However," at the start of its sentence, not inside it: "However, an opening parenthesis on one line ...", not "An opening parenthesis on one line, however, ...".</p>
+<p>Do not let "one" stand for a noun from earlier in the sentence; repeat the noun. Write "lines that would each give an error run together without generating an error", not "... run together without one".</p>
 <p>Gloss a short code or abbreviation the first time it is shown, for example, "if <code>Format</code> is <code>'D'</code> (which stands for <em>Data</em>)".</p>
 <p>Use the Oxford (serial) comma before the final item in a list of three or more items, for example, "the major release, minor release, and build number". Do not put a comma before "and" (or "or") when it joins only two items; the serial comma is only for lists of three or more.</p>
 <p>Keep the phrasing of parallel items consistent: entries in a list, rows in a table, or the descriptions of two related things should share the same structure and wording so the reader can compare them easily.</p>
 <p>When documenting an interface, present its parts in the order the software presents them. Sections describing the tabs of a dialog box follow the tab order, and rows describing the fields of a tab follow the order of the fields. A reader working through the dialog box should be able to work down the page in step with it.</p>
 <p>When you change or move documentation of an interface, check that every cross-reference into it still names something that exists. A reference to a field that has since been renamed or removed is worse than no reference, because it sends the reader looking for something that is not there.</p>
-<p>State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The one exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".</p>
-<p>Use "that" to introduce a restrictive clause and "which" for a non-restrictive one; use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.</p>
+<p>State what is true now, not how it came to be. Prefer "X is also known as Y" to "X was previously (or formerly) called Y". The only exception is when history explains why current behaviour departs from a standard; there a brief note is warranted, for example, "in its initial implementation Dyalog evaluated this left-to-right because ...".</p>
+<p>Use "that" to introduce a restrictive clause and "which" for a non-restrictive one, and do not set off with commas a phrase the sentence needs: in "Localising it by naming it in a function header gives it an empty value", the phrase says which localising is meant, and commas round it would mark it as removable and separate the subject from its verb. Use "if" for a condition and "whether" for a choice between alternatives. Prefer "when" for a situation that will occur and "if" for a genuine condition; avoid "where" for either.</p>
 <p>Do not use "for example" and "and so on" in the same list: give a few examples or trail off with "and so on", but not both.</p>
 <p>Do not open a sentence with an ambiguous "It ..."; start with "This ..." or the specific noun so the subject is clear.</p>
-<p>Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly. Drop "actually" and "in fact" where the sentence already carries the contrast, for example, in "however, the event is actually reported by each page".</p>
+<p>Do not use minimising filler such as "simply", "just", or "merely"; state the step plainly. Drop "actually" and "in fact" where the sentence already carries the contrast, for example, in "however, the event is actually reported by each page". Drop intensifiers that add nothing to a statement that is already absolute: "the same effect", not "exactly the same effect".</p>
 <p>Write "whether" rather than "whether or not"; keep "or not" only where both values are given, as in "whether (<code>1</code>) or not (<code>0</code>)".</p>
 <p>Do not preface a sentence with "Note that" or "Note also that", nor say "in order to" where "to" suffices; state the point directly.</p>
-<p>Do not use capitalisation for emphasis: write "only", not "ONLY".</p>
+<p>Do not use capitalisation for emphasis: write "only", not "ONLY". The same applies to a term set in capitals to mark it as a term: write "the session", "an external array", and "<code>⎕FCOPY</code> compacts the file", italicising the term on first use if it needs marking, rather than "SESSION", "EXTERNAL ARRAY" and "APL COMPACTS".</p>
+<p>Hyphenate a compound modifier before the noun it qualifies, and leave its elements in lower case: "operating-system-specific conventions", "a well-established convention". Without the hyphens the reader has to work out which words group together.</p>
 <p>Set an introductory subordinate clause off with a comma, for example, "If <code>Ragged</code> is not set, then ...", "..., even if ...", and open a consequence with "Similarly, ...".</p>
 <h2 id="terminology">Terminology</h2>
 <p>The following table lists correct terminology and terms to avoid. A complete list of the <a href="https://docs.dyalog.com/latest/CheatSheet%20-%20Nomenclature%20-%20Functions%20and%20Operators.pdf">approved names for glyphs and primitive functions/operators</a> is also available.</p>
@@ -952,6 +978,8 @@
 <p>Write a version with a lower-case "v", for example, "v19.0", not "V19.0".</p>
 <p>"System function" is the umbrella term: use it even for the sub-categories, as a system variable or system constant is still a system function; this keeps the documentation consistent.</p>
 <p>Write "variant operator" and "variant option" in lower case (capitalised only at the start of a sentence), and italicise the operator itself as the <em>variant</em> operator. Refer to an option as a "variant option", not a bare "variant".</p>
+<p>Write the common nouns that name language concepts in lower case, capitalised only at the start of a sentence: class, instance, interface, base class, namespace, method, property, field, event, constructor, destructor, and the like. They are ordinary nouns, not proper ones, and capitalising them mid-sentence gives them a weight they do not carry.</p>
+<p>Name a specific entity by its name, in code font, and leave the concept noun in lower case: write "the <code>Parrot</code> class", "an instance of <code>DomesticParrot</code>", and "the <code>BirdBehaviour</code> interface", not "the Parrot Class" or "Interface <code>BirdBehaviour</code>".</p>
 <p>Name a context specifically: avoid the vague "In APL" and write, for example, "In the Session".</p>
 <p>Best practice:</p>
 <table>
@@ -1011,8 +1039,27 @@
 <p>Use full stops for your list items if they complete a sentence (in this situation the list items should start with lower case letters), otherwise leave them without a full stop. In all ordered lists and most unordered lists, full stops will usually be appropriate.</p>
 <p>A list is not a single sentence split across its items. Where the items share a common logic, state it once in the lead-in line (or an admonition) above the list and let each item stand alone, rather than stringing the items together with connective phrases or trailing semicolons. For example, introduce a precedence order with "Each source overrides those below it:" and then list the bare source names.</p>
 <p>Do not use a numbered list where the numbering could imply an order or precedence that does not exist; use a bulleted list. If the numbers are genuinely part of each item's name, fold them into the item text and keep the list bulleted.</p>
+<h2 id="apl-code">APL Code</h2>
+<p>Every piece of APL code in the documentation, whether inline or in a code block, must:</p>
+<ul>
+<li>work with the default values of <code>⎕IO</code> and <code>⎕ML</code>, both <code>1</code>, unless there is a good reason to use other values, in which case the text states the values that the code uses.</li>
+<li>use array notation where appropriate.</li>
+<li>follow the current recommendations of Dyalog Ltd, including:<ul>
+<li>use <code>⎕←</code> rather than <code>⊢</code>, <code>⊣</code>, or <code>+</code> to display a shy result.</li>
+<li>use <code>⎕VGET</code> rather than <em>execute</em> (<code>⍎</code>) to obtain the value of a name.</li>
+</ul>
+</li>
+<li>run as shown, with every result and error message exactly as the interpreter displays it.</li>
+<li>define everything that it uses, or refer to a definition given earlier on the page, for example, a definition that several examples share and that is given once at the top of the page.</li>
+<li>be minimal but complete.</li>
+<li>not depend on any environment that the text does not state.</li>
+<li>use relative, platform-neutral paths, unless the code is about a platform-specific path.</li>
+<li>show results in the plain display, which assumes <code>]Boxing on</code> without showing the command that turns it on.</li>
+<li>use <code>]Display</code> or <code>DISPLAY</code> only when the extra information earns its place: distinguishing an empty character vector from an empty numeric one, showing rank and prototype, or exposing a nested structure that the plain display flattens.</li>
+</ul>
 <h2 id="code-blocks">Code Blocks</h2>
-<p>Leave a blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single <code>&lt;p&gt;</code>, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.</p>
+<p>A code block contains code in one language only, and its fence carries the tag for that language: <code>apl</code> for <a href="../style/#apl-code-blocks">APL code blocks</a> and <code>nonAPL</code> for <a href="../style/#non-apl-code-blocks">non-APL code blocks</a>. In an APL code block, indent each line of input by six spaces, as the Session does, and show output where the interpreter displays it, normally at the left margin.</p>
+<p>Leave a single blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single <code>&lt;p&gt;</code>, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.</p>
 <pre class="highlight"><code class="language-markdown">Correct:
 
       1
