@@ -163,9 +163,28 @@ A list is not a single sentence split across its items. Where the items share a 
 
 Do not use a numbered list where the numbering could imply an order or precedence that does not exist; use a bulleted list. If the numbers are genuinely part of each item's name, fold them into the item text and keep the list bulleted.
 
+## APL Code
+
+Every piece of APL code in the documentation, whether inline or in a code block, must:
+
+- work with the default values of `⎕IO` and `⎕ML`, both `1`, unless there is a good reason to use other values, in which case the text states the values that the code uses.
+- use array notation where appropriate.
+- follow the current recommendations of Dyalog Ltd, including:
+    - use `⎕←` rather than `⊢`, `⊣`, or `+` to display a shy result.
+    - use `⎕VGET` rather than _execute_ (`⍎`) to obtain the value of a name.
+- run as shown, with every result and error message exactly as the interpreter displays it.
+- define everything that it uses, or refer to a definition given earlier on the page, for example, a definition that several examples share and that is given once at the top of the page.
+- be minimal but complete.
+- not depend on any environment that the text does not state.
+- use relative, platform-neutral paths, unless the code is about a platform-specific path.
+- show results in the plain display, which assumes `]Boxing on` without showing the command that turns it on.
+- use `]Display` or `DISPLAY` only when the extra information earns its place: distinguishing an empty character vector from an empty numeric one, showing rank and prototype, or exposing a nested structure that the plain display flattens.
+
 ## Code Blocks
 
-Leave a blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single `<p>`, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.
+A code block contains code in one language only, and its fence carries the tag for that language: `apl` for [APL code blocks](style.md#apl-code-blocks) and `nonAPL` for [non-APL code blocks](style.md#non-apl-code-blocks). In an APL code block, indent each line of input by six spaces, as the Session does, and show output where the interpreter displays it, normally at the left margin.
+
+Leave a single blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single `<p>`, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.
 
 ```markdown
 Correct:
