@@ -1050,7 +1050,8 @@
 </ul>
 </li>
 <li>run as shown, with every result and error message exactly as the interpreter displays it.</li>
-<li>define everything that it uses, or refer to a definition given earlier on the page, for example, a definition that several examples share and that is given once at the top of the page.</li>
+<li>define everything that it uses, or refer to a definition given earlier on the same page, for example, a definition that several examples share and that is given once at the top of the page. Do not refer to another page for a definition. Each page contains all the code that its examples need.</li>
+<li>define a tradfn or tradop in <code>∇</code> form, not with <code>⎕FX</code> or by showing the result of <code>⎕VR</code>.</li>
 <li>be minimal but complete.</li>
 <li>not depend on any environment that the text does not state.</li>
 <li>use relative, platform-neutral paths, unless the code is about a platform-specific path.</li>
@@ -1059,6 +1060,12 @@
 </ul>
 <h2 id="code-blocks">Code Blocks</h2>
 <p>A code block contains code in one language only, and its fence carries the tag for that language: <code>apl</code> for <a href="../style/#apl-code-blocks">APL code blocks</a> and <code>nonAPL</code> for <a href="../style/#non-apl-code-blocks">non-APL code blocks</a>. In an APL code block, indent each line of input by six spaces, as the Session does, and show output where the interpreter displays it, normally at the left margin.</p>
+<p>In a Session example, show a <code>∇</code> definition as it is entered in the Session, with the opening <code>∇</code> and header indented by six spaces, each line after its line-number prompt, and the closing <code>∇</code> indented by six spaces.</p>
+<pre class="highlight"><code class="language-apl">      ∇ R←FOO
+[1]    R←10
+      ∇
+      FOO
+10</code></pre>
 <p>Leave a single blank line on both sides of a fenced code block. Without it the fence is not recognised as a block boundary: the paragraph, the fence, and everything up to the next blank line are swallowed into a single <code>&lt;p&gt;</code>, so the prose renders as raw text and the code block is nested inside the paragraph. This bites hardest for a one-line explanation between two code blocks, which touches a fence above and below at once.</p>
 <pre class="highlight"><code class="language-markdown">Correct:
 
