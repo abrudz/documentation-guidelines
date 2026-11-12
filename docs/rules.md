@@ -185,7 +185,7 @@ Every piece of APL code in the documentation, whether inline or in a code block,
 
 A code block contains code in one language only, and its fence carries the tag for that language: `apl` for [APL code blocks](style.md#apl-code-blocks) and `nonAPL` for [non-APL code blocks](style.md#non-apl-code-blocks). In an APL code block, indent each line of input by six spaces, as the Session does, and show output where the interpreter displays it, normally at the left margin.
 
-In a Session example, show a `∇` definition as it is entered in the Session: the opening `∇` and header indented by six spaces, each line after its line-number prompt, and the closing `∇` indented by six spaces.
+In a Session example, show a `∇` definition as it is entered in the Session, with the opening `∇` and header indented by six spaces, each line after its line-number prompt, and the closing `∇` indented by six spaces.
 
 ```apl
       ∇ R←FOO
