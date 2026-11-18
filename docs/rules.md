@@ -254,10 +254,16 @@ Describe a deprecated feature consistently:
 
 For example: "`739⌶` has been deprecated and is scheduled for removal in a future release. Its functionality is now provided by [`⎕SYSTEM.Directories.Temp`](#)."
 
-A feature that still works but is superseded is different from a deprecated one, and the two are written differently. What separates them is whether the feature is going away.
+A feature that still works but is superseded or deprecated is written in one of three ways. What separates them is whether the feature is going away, and whether readers have to act before it does.
 
-- Superseded and scheduled for removal: describe it with the fixed phrase "retained for backwards compatibility purposes" and, where it is an aside, present it in a `!!! Legacy "Legacy"` admonition. The box is the warning that the feature is going away.
 - Superseded but staying indefinitely: do not use an admonition. Name the newer feature in the flow of the text, as a positive statement of what that feature offers, for example "A newer system function, [`⎕ATX`](#), can be used instead: it is a superset of `⎕AT` that reports many more attributes, lets you choose which of them to report, and applies to any name, not only defined functions and operators."
+- Retained for backwards compatibility, and possibly removed at some unspecified point: describe it with the fixed phrase "retained for backwards compatibility purposes" and, where it is an aside, present it in a `!!! Legacy "Legacy"` admonition. The box tells readers not to build on the feature.
+- Scheduled for removal, with a call for action: present it in a `!!! Info "Information"` admonition, not a Legacy one, even when it would otherwise be a Legacy note. A call for action asks readers to do something before the feature goes, such as converting files or changing code, and a Legacy box would understate it. For example:
+
+    ```
+    !!! Info "Information"
+        Component files that have both journalling and checksum properties set to `0` have been deprecated, and component files with this combination of properties are read-only. Dyalog Ltd recommends using [`⎕FPROPS`](#) to convert any such files to have different properties.
+    ```
 
 A Legacy box on a feature that is not going away reads as a warning that it is, which alarms readers and invites questions the documentation then has to answer. It also interrupts a page to say something that belongs in its narrative.
 

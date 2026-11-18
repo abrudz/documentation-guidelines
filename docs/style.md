@@ -208,7 +208,7 @@ Notes are used to highlight important information.
 
 - Information
 
-    Highlighting material of particular significance or relevance
+    Highlighting material of particular significance or relevance, including a call for action about functionality that is scheduled for removal; see [Deprecations](./rules.md#deprecations)
 
     <p class="example">example</p>
 
@@ -244,7 +244,7 @@ Notes are used to highlight important information.
 
 - Legacy
 
-    Legacy information pertaining to behaviour in earlier releases of Dyalog, or to superseded functionality that still exists but is scheduled for removal. Functionality that is superseded yet staying indefinitely does not take this note; see [Deprecations](./rules.md#deprecations)
+    Legacy information pertaining to behaviour in earlier releases of Dyalog, or to functionality that is retained for backwards compatibility but might be removed at some point. Functionality that is superseded yet staying indefinitely does not take this note, and functionality that is scheduled for removal, with a call for action, takes an Information note instead; see [Deprecations](./rules.md#deprecations)
 
     <p class="example">example</p>
 
