@@ -168,6 +168,7 @@ Do not use a numbered list where the numbering could imply an order or precedenc
 Every piece of APL code in the documentation, whether inline or in a code block, must:
 
 - work with the default values of `⎕IO` and `⎕ML`, both `1`, unless there is a good reason to use other values, in which case the text states the values that the code uses.
+- use a form that does not depend on `⎕ML` wherever one serves equally well. For example, `1⊃X` picks the first item whatever the value of `⎕ML`, whereas monadic `⊃` is _first_ only when `⎕ML` is less than `2`, and _mix_ otherwise.
 - use array notation where appropriate.
 - follow the current recommendations of Dyalog Ltd, including:
     - use `⎕←` rather than `⊢`, `⊣`, or `+` to display a shy result.
@@ -229,6 +230,12 @@ Set argument, option, and result *values* in code wherever they appear, not only
 When a system function is documented as two pages, one per form, each page reaches the other through an organic link on the form itself ("the [dyadic form](#) closely emulates APL2"), not through a trailing "for the other form, see ...". The disambiguation page opens with a single sentence on what the function does, common to both forms, before naming either. Each form then gets an H2 that is the title of its page, so that the page's own table of contents lists the forms by name rather than by valence; under each, one sentence introducing that form ends with a colon and is followed by a short example. Do not link the heading itself: the table of contents entry and the heading would then carry the same words to different destinations, which reads as a mistake. Put the link in that sentence, on whatever selects the form, for example "[`⎕TALLOC 1`](#) reserves a range" or "[Monadic `⎕AT`](#) reports".
 
 Introduce a function's arguments and result with consistent lead phrasing, for example, "`Y` is specified as either a character vector or a vector of character vectors", "The result `R` is a two-element vector consisting of ...", or "`X` must be omitted". Argument and result names (`X`, `Y`, `R`) are set in code spans wherever they appear, in prose as well as in code.
+
+Refer to an item of an argument or result by the expression that selects it:
+
+- If the array is simple and always a vector, use indexing: `Y[1]`, `Y[2]`, and so on.
+- If any of its items can be nested, use _pick_: `1⊃Y`, `2⊃Y`, and so on. `Y[2]` is then an enclosure of the item rather than the item itself, and `1⊃Y` rather than `⊃Y` keeps the expression [independent of `⎕ML`](#apl-code).
+- If the array can also be a scalar, write `⊃Y` instead of `1⊃Y` for its first item. `⊃Y` is the scalar itself when `Y` is a scalar, whereas `1⊃Y` and `Y[1]` signal `RANK ERROR`.
 
 Where an argument or option takes a set of values, list them as "value – meaning" pairs (en-dash) and mark the default inline, for example:
 
