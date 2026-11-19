@@ -1043,6 +1043,7 @@
 <p>Every piece of APL code in the documentation, whether inline or in a code block, must:</p>
 <ul>
 <li>work with the default values of <code>⎕IO</code> and <code>⎕ML</code>, both <code>1</code>, unless there is a good reason to use other values, in which case the text states the values that the code uses.</li>
+<li>use a form that does not depend on <code>⎕ML</code> wherever one serves equally well. For example, <code>1⊃X</code> picks the first item whatever the value of <code>⎕ML</code>, whereas monadic <code>⊃</code> is <em>first</em> only when <code>⎕ML</code> is less than <code>2</code>, and <em>mix</em> otherwise.</li>
 <li>use array notation where appropriate.</li>
 <li>follow the current recommendations of Dyalog Ltd, including:<ul>
 <li>use <code>⎕←</code> rather than <code>⊢</code>, <code>⊣</code>, or <code>+</code> to display a shy result.</li>
@@ -1085,6 +1086,12 @@ Wrong:
 <p>Set argument, option, and result <em>values</em> in code wherever they appear, not only the names: "<code>0</code> if the object is not an operator", "if <code>X</code> is <code>1</code>", "always reported as <code>0</code>". Counts and quantities stay plain: "0 or more names", "a 4-element vector". Where a table cell lists the alternative values of one element, separate them with commas rather than running them together.</p>
 <p>When a system function is documented as two pages, one per form, each page reaches the other through an organic link on the form itself ("the <a href="#">dyadic form</a> closely emulates APL2"), not through a trailing "for the other form, see ...". The disambiguation page opens with a single sentence on what the function does, common to both forms, before naming either. Each form then gets an H2 that is the title of its page, so that the page's own table of contents lists the forms by name rather than by valence; under each, one sentence introducing that form ends with a colon and is followed by a short example. Do not link the heading itself: the table of contents entry and the heading would then carry the same words to different destinations, which reads as a mistake. Put the link in that sentence, on whatever selects the form, for example "<a href="#"><code>⎕TALLOC 1</code></a> reserves a range" or "<a href="#">Monadic <code>⎕AT</code></a> reports".</p>
 <p>Introduce a function's arguments and result with consistent lead phrasing, for example, "<code>Y</code> is specified as either a character vector or a vector of character vectors", "The result <code>R</code> is a two-element vector consisting of ...", or "<code>X</code> must be omitted". Argument and result names (<code>X</code>, <code>Y</code>, <code>R</code>) are set in code spans wherever they appear, in prose as well as in code.</p>
+<p>Refer to an item of an argument or result by the expression that selects it:</p>
+<ul>
+<li>If the array is simple and always a vector, use indexing: <code>Y[1]</code>, <code>Y[2]</code>, and so on.</li>
+<li>If any of its items can be nested, use <em>pick</em>: <code>1⊃Y</code>, <code>2⊃Y</code>, and so on. <code>Y[2]</code> is then an enclosure of the item rather than the item itself, and <code>1⊃Y</code> rather than <code>⊃Y</code> keeps the expression <a href="#apl-code">independent of <code>⎕ML</code></a>.</li>
+<li>If the array can also be a scalar, write <code>⊃Y</code> instead of <code>1⊃Y</code> for its first item. <code>⊃Y</code> is the scalar itself when <code>Y</code> is a scalar, whereas <code>1⊃Y</code> and <code>Y[1]</code> signal <code>RANK ERROR</code>.</li>
+</ul>
 <p>Where an argument or option takes a set of values, list them as "value – meaning" pairs (en-dash) and mark the default inline, for example:</p>
 <ul>
 <li><code>0</code> – sub-directories are not scanned (default).</li>
