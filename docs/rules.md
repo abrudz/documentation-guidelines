@@ -282,11 +282,7 @@ Do not overuse notes. Only use an admonition when the content is a genuine aside
 
 ## Links
 
-When linking within a sub-site (from one page to another in the same guide, for example, within the _Language Reference Guide_), reference the target file by its path including the `.md` extension, for example, `[Notes](../primitive-functions/notes.md)`. This form is always safe: the file is resolved and rewritten to the correct URL.
-
-When linking between sub-sites (from one guide to another), use the extension-less directory form, for example, `[⎕SIGNAL](../../language-reference-guide/system-functions/signal/)`.
-
-Using the file form for sub-site-internal links and the directory form for cross-sub-site links gives a useful practical distinction: the presence of a `.md` extension shows at a glance whether a link stays within the current guide.
+Link to another page by its file path, including the `.md` extension, both within a sub-site (from one page to another in the same guide, for example, within the _Language Reference Guide_), as in `[Notes](../primitive-functions/notes.md)`, and between sub-sites (from one guide to another), as in `[⎕SIGNAL](../../language-reference-guide/system-functions/signal.md)`. The file is resolved and rewritten to the correct URL.
 
 Punctuation that belongs to the sentence goes outside the link text, not inside it. Write "[Chromium Embedded Framework (CEF)](https://example.com)." rather than "[Chromium Embedded Framework (CEF).](https://example.com)". Link only the words that name the target, so a trailing full stop, comma, or closing bracket stays unlinked.
 
