@@ -1061,9 +1061,9 @@
 </ul>
 <h2 id="code-blocks">Code Blocks</h2>
 <p>A code block contains code in one language only, and its fence carries the tag for that language: <code>apl</code> for <a href="../style/#apl-code-blocks">APL code blocks</a> and <code>nonAPL</code> for <a href="../style/#non-apl-code-blocks">non-APL code blocks</a>. In an APL code block, indent each line of input by six spaces, as the Session does, and show output where the interpreter displays it, normally at the left margin.</p>
-<p>In a Session example, show a <code>∇</code> definition as it is entered in the Session, with the opening <code>∇</code> and header indented by six spaces, each line after its line-number prompt, and the closing <code>∇</code> indented by six spaces.</p>
+<p>In a Session example, show a <code>∇</code> definition with the opening <code>∇</code> and header indented by six spaces, each line of the body indented by eight spaces (plus the indentation of any control structure it is in), and the closing <code>∇</code> indented by six spaces. Do not show line-number prompts.</p>
 <pre class="highlight"><code class="language-apl">      ∇ R←FOO
-[1]    R←10
+        R←10
       ∇
       FOO
 10</code></pre>
